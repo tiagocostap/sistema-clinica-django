@@ -1,13 +1,13 @@
 # Sistema de Clínica Médica
 
-Sistema web desenvolvido em Django para gerenciamento de clínica médica.
+Sistema web desenvolvido em Django para gerenciamento de uma clínica médica.
 
 ## Funcionalidades
 
 - Cadastro de pacientes
 - Cadastro de médicos
 - Cadastro de consultas
-- Listagem e edição de registros (CRUD)
+- Edição e exclusão de registros (CRUD)
 
 ## Tecnologias utilizadas
 
@@ -16,23 +16,28 @@ Sistema web desenvolvido em Django para gerenciamento de clínica médica.
 - SQLite
 - HTML / CSS
 
-## Como executar o projeto
+## Telas do Sistema
 
-1. Clone o repositório
+### Página inicial
+![Home](imagens/home.png)
 
-git clone https://github.com/tiagocostap/sistema-clinica-django.git
+### Cadastro de pacientes
+![Cadastro de Pacientes](imagens/cadastro_pacientes.png)
 
-2. Entre na pasta do projeto
+### Lista de pacientes
+![Lista de Pacientes](imagens/lista_pacientes.png)
 
-cd sistema-clinica-django
+### Cadastro de médicos
+![Cadastro de Médicos](imagens/cadastro_medicos.png)
 
-3. Execute o servidor
+### Lista de médicos
+![Lista de Médicos](imagens/lista_medicos.png)
 
-python manage.py runserver
+### Cadastro de consultas
+![Cadastro de Consultas](imagens/cadastro_consultas.png)
 
-Depois acesse:
-
-http://127.0.0.1:8000/
+### Lista de consultas
+![Lista de Consultas](imagens/lista_consultas.png)
 
 ## Autor
 
