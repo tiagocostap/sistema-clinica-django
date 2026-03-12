@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2 class="mb-4">Lista de Pacientes</h2>
+
+<div class="d-flex gap-2 mb-3">
+    <a href="/" class="btn btn-secondary">Voltar</a>
+    <a href="{% url 'criar_paciente' %}" class="btn btn-success"> Adicionar paciente</a>
+</div>
+
+<table class="table table-striped table-bordered table-hover">
+    <thead class="table-primary">
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th style="width: 180px;">Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for paciente in pacientes %}
+        <tr>
+            <td>{{ paciente.id }}</td>
+            <td>{{ paciente.nome }}</td>
+            <td>
+                <a href="{% url 'editar_paciente' paciente.id %}" 
+                   class="btn btn-warning btn-sm">
+                   Editar
+                </a>
+
+                <a href="{% url 'excluir_paciente' paciente.id %}" 
+                   class="btn btn-danger btn-sm">
+                   Excluir
+                </a>
+            </td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="3" class="text-center">
+                Nenhum paciente cadastrado.
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

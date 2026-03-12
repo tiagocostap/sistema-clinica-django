@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1 class="mb-4">CLÍNICA DA SAÚDE</h1>
+
+<div class="row">
+
+    <div class="col-md-4">
+    <div class="card text-center p-3">
+        <h4>Pacientes</h4>
+        <p>Gerenciar pacientes.</p>
+
+        <a href="/pacientes/novo/" class="btn btn-primary m-1">
+            Cadastrar novo paciente
+        </a>
+
+        <a href="/pacientes/" class="btn btn-secondary m-1">
+            Ver todos os pacientes
+        </a>
+
+    </div>
+</div>
+
+    <div class="col-md-4">
+    <div class="card text-center p-3">
+        <h4>Médicos</h4>
+        <p>Gerenciar médicos.</p>
+
+        <a href="/medicos/novo/" class="btn btn-primary m-1">
+            Cadastrar novo médico
+        </a>
+
+        <a href="/medicos/" class="btn btn-secondary m-1">
+            Ver todos os médicos
+        </a>
+
+    </div>
+</div>
+
+    <div class="col-md-4">
+    <div class="card text-center p-3">
+        <h4>Consultas</h4>
+        <p>Gerenciar consultas.</p>
+
+        <a href="/consultas/criar/" class="btn btn-primary m-1">
+            Agendar consultas
+        </a>
+
+        <a href="/consultas/" class="btn btn-secondary m-1">
+            Ver consultas agendadas
+        </a>
+
+    </div>
+</div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Cadastro de Consulta</h1>
+
+<form method="post">
+    {% csrf_token %}
+
+    <div class="mb-3">
+        <label class="form-label">PACIENTE:</label>
+        {{ form.paciente }}
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">MÉDICO:</label>
+        {{ form.medico }}
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">DATA:</label>
+        {{ form.data }}
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">HORA:</label>
+        {{ form.hora }}
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">OBSERVAÇÃO:</label>
+        {{ form.observacao }}
+    </div>
+
+    <button class="btn btn-success">
+        Salvar
+    </button>
+
+</form>
+
+<a href="{% url 'home' %}" class="btn btn-secondary mt-3">
+    Voltar
+</a>
+
+{% endblock %}
